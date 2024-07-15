@@ -26,7 +26,7 @@ with st.sidebar:
 st.title("My ChatBot")
 
 if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "메시한테 무엇이든 물어보세요!"}]
+    st.session_state["messages"] = [{"role": "assistant", "content": "성을 입력 해 주세요. 이름을 지어드립니다!"}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
