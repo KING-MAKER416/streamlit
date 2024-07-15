@@ -4,6 +4,7 @@ import time
 
 assistant_id = st.secrets["assistant_id"]
 thread_id = st.secrets["thread_id"]
+OpenAI API KET = "sk-proj-xpxpJFnNxGzxPExRjjmtT3BlbkFJMIBwJOGcBkYZJgkMlRRc"
 
 with st.sidebar:
     st.link_button("더 많은 정보 보러가기", "https://quick-log.com/")
