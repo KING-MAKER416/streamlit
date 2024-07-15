@@ -2,8 +2,8 @@ from openai import OpenAI
 import streamlit as st
 import time
 
-assistant_id = 'asst_4LJE26CQDR5Npe4CoVZBTCJZ'
-# thread_id = 'thread_lFi3a0mfqKFs34M0pAtCiihv'
+assistant_id = st.secrets["assistant_id"]
+thread_id = st.secrets["thread_id"]
 
 with st.sidebar:
     st.link_button("더 많은 정보 보러가기", "https://quick-log.com/")
@@ -14,7 +14,7 @@ with st.sidebar:
     
     openai_api_key = st.text_input("OpenAI API KEY", type="password")
     client = OpenAI(api_key=openai_api_key)
-    thread_id = st.text_input("Thread ID", value='thread_lFi3a0mfqKFs34M0pAtCiihv')
+    thread_id = st.text_input("Thread ID", value=thread_id)
 
     thread_make_btn = st.button("Create a new thread")
     if thread_make_btn:
