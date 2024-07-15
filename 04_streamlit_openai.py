@@ -3,7 +3,6 @@ import streamlit as st
 import time
 
 assistant_id = st.secrets["assistant_id"]
-thread_id = st.secrets["thread_id"]
 openai_api_key = st.secrets["openai_api_key"]
 
 with st.sidebar:
@@ -15,7 +14,6 @@ with st.sidebar:
     
 
     client = OpenAI(api_key=openai_api_key)
-    thread_id = st.text_input("Thread ID", value=thread_id)
 
     thread_make_btn = st.button("Create a new thread")
     if thread_make_btn:
