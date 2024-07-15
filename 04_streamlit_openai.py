@@ -3,6 +3,7 @@ import streamlit as st
 import time
 
 assistant_id = st.secrets["assistant_id"]
+thread_id = st.secrets["thread_id"]
 openai_api_key = st.secrets["openai_api_key"]
 
 with st.sidebar:
