@@ -23,10 +23,10 @@ with st.sidebar:
         thread_id = thread.id
         st.subheader(thread_id)
 
-st.title("My ChatBot")
+st.title("온라인 작명소")
 
 if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "성을 입력 해 주세요. 이름을 지어드립니다!"}]
+    st.session_state["messages"] = [{"role": "assistant", "content": "성과 성별을 입력 해 주세요. 이름을 지어드립니다!"}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
