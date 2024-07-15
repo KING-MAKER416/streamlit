@@ -4,7 +4,6 @@ import time
 
 assistant_id = st.secrets["assistant_id"]
 thread_id = st.secrets["thread_id"]
-OpenAI API KEY = "sk-proj-xpxpJFnNxGzxPExRjjmtT3BlbkFJMIBwJOGcBkYZJgkMlRRc"
 
 with st.sidebar:
     st.link_button("더 많은 정보 보러가기", "https://quick-log.com/")
@@ -14,7 +13,7 @@ with st.sidebar:
     st.info("이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.")
     
     openai_api_key = st.text_input("OpenAI API KEY", type="password")
-    client = OpenAI(api_key=openai_api_key)
+    client = OpenAI(api_key="sk-proj-xpxpJFnNxGzxPExRjjmtT3BlbkFJMIBwJOGcBkYZJgkMlRRc")
     thread_id = st.text_input("Thread ID", value=thread_id)
 
     thread_make_btn = st.button("Create a new thread")
