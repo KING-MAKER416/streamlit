@@ -12,7 +12,7 @@ with st.sidebar:
     st.markdown(iframe_html, unsafe_allow_html=True)
     st.info("이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.")
     
-    openai_api_key = st.text_input("OpenAI API KEY", type="password", value="sk-proj-xpxpJFnNxGzxPExRjjmtT3BlbkFJMIBwJOGcBkYZJgkMlRRc")
+    openai_api_key = st.text_input("OpenAI API KEY", type="password")
     client = OpenAI(api_key=openai_api_key)
     thread_id = st.text_input("Thread ID", value=thread_id)
 
